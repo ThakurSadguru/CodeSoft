@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css';
 import {Route, BrowserRouter as Router, Routes} from 'react-router-dom'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
@@ -14,13 +15,14 @@ const App = () => {
    <Router>
     <div>
       <Header />
+      <main>
       <Routes>
         <Route path='/' element={<HomePage />}></Route>
         <Route path='/about' element={<AboutPage />}></Route>
         <Route path='/projects' element={<ProjectPage ></ProjectPage>}></Route>
         <Route path='/contact' element={<ContactPage />}></Route>
       </Routes>
-     
+      </main>
       <Footer />
     </div>
 
