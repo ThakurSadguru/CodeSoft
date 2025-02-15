@@ -1,7 +1,8 @@
 import React from 'react'
-import {BrowserRouter as Router} from 'react-router-dom'
+import {Route, BrowserRouter as Router, Routes} from 'react-router-dom'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
+import HomePage from './Pages/HomePage'
 
 const App = () => {
 
@@ -10,6 +11,9 @@ const App = () => {
    <Router>
     <div>
       <Header />
+      <Routes>
+        <Route path='/' element={<HomePage />}></Route>
+      </Routes>
       <Footer />
     </div>
 
